@@ -77,7 +77,7 @@ export default function NavBar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
-                <span className="block">{item.name}</span>
+                <span className="block cursor-pointer">{item.name}</span>
               </a>
             ))}
           </MobileNavMenu>

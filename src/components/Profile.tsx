@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapP
 
 export default function Profile() {
   return (
-    <div className="p-8 z-50">
+    <div className="p-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Profile Info */}
         <div className="flex flex-col items-center lg:items-start space-y-6">
@@ -22,9 +22,9 @@ export default function Profile() {
           {/* Name and Title */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold mb-2">Rohit Thorat</h1>
-            <p className="text-xl mb-4">Full Stack Developer  |  AIML</p>
+            <p className="text-xl mb-4">Aspiring Software Engineer  |  Full Stack Developer  |  AIML</p>
             <p className="max-w-md leading-relaxed">
-              CS student passionate about building scalable systems and solving complex problems
+              “Hi, I’m Rohit — a B.Tech Computer Science student passionate about building modern web apps, scalable systems and solving complex problems
             </p>
           </div>
 
