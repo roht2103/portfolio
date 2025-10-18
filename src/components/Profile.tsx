@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { IconBrandGithub, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapPin } from "@tabler/icons-react";
+import { IconBrandGithub, IconFileText, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapPin } from "@tabler/icons-react";
+import { Button } from "./ui/button";
 
 export default function Profile() {
   return (
@@ -49,6 +50,11 @@ export default function Profile() {
                     <IconBrandTwitter className="w-5 h-5 cursor-pointer" />
                 </a>
             </div>
+            <a href="/Rohit Vishwas Thorat_Resume.pdf">
+            <Button className="cursor-pointer" variant="secondary">
+              <IconFileText/>
+              View Resume
+            </Button></a>
           </div>
         </div>
 
