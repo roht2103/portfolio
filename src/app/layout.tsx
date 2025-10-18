@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,16 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="h-full">
         <head />
-        <body>
+        <body className="h-full">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="relative min-h-screen w-full">
+              <BackgroundBeams />
+              <div className="relative z-10">
+                {children}
+              </div>
+            </div>
           </ThemeProvider>
         </body>
       </html>

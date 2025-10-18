@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapP
 
 export default function Profile() {
   return (
-    <div className="p-8">
+    <div className="p-8 z-50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Profile Info */}
         <div className="flex flex-col items-center lg:items-start space-y-6">
@@ -30,15 +30,15 @@ export default function Profile() {
 
           {/* Contact Info */}
           <div className="space-y-3">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center lg:justify-start justify-center gap-3">
               <IconMail className="w-5 h-5" />
               <span>rohitthorat680@gmail.com</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center lg:justify-start justify-center gap-3">
               <IconMapPin className="w-5 h-5" />
               <span>Pune, India</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center lg:justify-start justify-center gap-3">
                 <a href="https://github.com/roht2103">
                     <IconBrandGithub className="w-5 h-5 cursor-pointer" />
                 </a>
