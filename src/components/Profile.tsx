@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconMapPin } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapPin } from "@tabler/icons-react";
 
 export default function Profile() {
   return (
@@ -9,9 +9,9 @@ export default function Profile() {
         {/* Left Column - Profile Info */}
         <div className="flex flex-col items-center lg:items-start space-y-6">
           {/* Profile Image */}
-          <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-slate-700 shadow-2xl">
+          <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-slate-300 dark:ring-slate-700 shadow-2xl">
             <Image
-              src="/profile.jpg"
+              src="/rohit.jpg"
               alt="Profile Picture"
               fill
               className="object-cover"
@@ -22,7 +22,7 @@ export default function Profile() {
           {/* Name and Title */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold mb-2">Rohit Thorat</h1>
-            <p className="text-xl mb-4">Full Stack Developer</p>
+            <p className="text-xl mb-4">Full Stack Developer  |  AIML</p>
             <p className="max-w-md leading-relaxed">
               CS student passionate about building scalable systems and solving complex problems
             </p>
@@ -38,6 +38,17 @@ export default function Profile() {
               <IconMapPin className="w-5 h-5" />
               <span>Pune, India</span>
             </div>
+            <div className="flex items-center gap-3">
+                <a href="https://github.com/roht2103">
+                    <IconBrandGithub className="w-5 h-5 cursor-pointer" />
+                </a>
+                <a href="https://linkedin.com/in/rohit-thorat-502566246">
+                    <IconBrandLinkedin className="w-5 h-5 cursor-pointer" />
+                </a>
+                <a href="https://x.com/RohitTh53744122">
+                    <IconBrandTwitter className="w-5 h-5 cursor-pointer" />
+                </a>
+            </div>
           </div>
         </div>
 
@@ -45,7 +56,7 @@ export default function Profile() {
         <div className="space-y-12">
           {/* Core Skills Section */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 border-b border-slate-700 pb-2">
+            <h2 className="text-2xl font-bold mb-6 border-b border-slate-300 dark:border-slate-700 pb-2">
               Core Skills
             </h2>
 
@@ -53,25 +64,25 @@ export default function Profile() {
             {/* Languages */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">⚡ Languages</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">⚡ Languages</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Python
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Java
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   C
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   C++
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   JavaScript
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   PHP
                 </span>
               </div>
@@ -80,13 +91,13 @@ export default function Profile() {
             {/* Technologies */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">🔧 Technologies</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">🔧 Technologies</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   MERN Stack
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Machine Learning
                 </span>
               </div>
@@ -95,25 +106,19 @@ export default function Profile() {
             {/* Frontend */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">🎨 Frontend</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">🎨 Frontend</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   React.js
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Next.js
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Tailwind CSS
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
-                  HTML
-                </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
-                  CSS
-                </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Bootstrap
                 </span>
               </div>
@@ -122,16 +127,16 @@ export default function Profile() {
             {/* Deployment */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">� Deployment</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">� Deployment</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Vercel
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Netlify
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Render
                 </span>
               </div>
@@ -140,19 +145,19 @@ export default function Profile() {
             {/* Clouds & Databases */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">💾 Clouds & Databases</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">💾 Clouds & Databases</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   PostgreSQL
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   MySQL
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Firebase
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   MongoDB
                 </span>
               </div>
@@ -161,22 +166,22 @@ export default function Profile() {
             {/* Developer Tools */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-sm">🛠️ Developer Tools</span>
+                <span className="dark:text-slate-400 text-slate-700 text-sm">🛠️ Developer Tools</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
-                  Postman
-                </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   VS Code
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
+                  Postman
+                </span>
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Android Studio
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   GitHub
                 </span>
-                <span className="px-4 py-2 bg-slate-900 rounded-4xl text-xs border border-slate-700">
+                <span className="px-4 py-2 bg-slate-200 dark:bg-slate-900 font-medium rounded-4xl text-xs border border-slate-900">
                   Docker
                 </span>
               </div>
@@ -186,41 +191,41 @@ export default function Profile() {
 
           {/* Experience Section */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 border-b border-slate-700 pb-2">
+            <h2 className="text-2xl font-bold mb-6 border-b border-slate-300 dark:border-slate-700 pb-2">
               Experience
             </h2>
 
             <div className="space-y-8">
               {/* Experience Item 1 */}
-              <div className="relative pl-8 border-l-2 border-slate-700">
-                <div className="absolute left-0 top-6 w-4 h-4 bg-slate-400 rounded-full -translate-x-[9px]"></div>
+              <div className="relative pl-8 border-l-2 border-slate-300 dark:border-slate-700">
+                <div className="absolute left-0 top-6 w-4 h-4 bg-slate-400 dark:bg-slate-400 rounded-full -translate-x-[9px]"></div>
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="text-lg font-semibold">Full Stack Developer</h3>
-                    <p className="text-slate-400 text-sm">Intern at EventDoor</p>
+                    <p className="text-slate-600 italic dark:text-slate-400 text-sm">Intern at EventDoor</p>
                   </div>
-                  <span className="text-slate-400 text-sm whitespace-nowrap">
+                  <span className="text-slate-600 dark:text-slate-400 text-sm whitespace-nowrap">
                     2025 - Present
                   </span>
                 </div>
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                   Worked as a Full Stack Developer at EventDoor, developing dashboards in their platform. Gained proficiency in Next.js, Node.js, PostgreSQL (Neon + Drizzle ORM)
                 </p>
               </div>
 
               {/* Experience Item 2 */}
-              <div className="relative pl-8 border-l-2 border-slate-700">
-                <div className="absolute left-0 top-6 w-4 h-4 bg-slate-400 rounded-full -translate-x-[9px]"></div>
+              <div className="relative pl-8 border-l-2 border-slate-300 dark:border-slate-700">
+                <div className="absolute left-0 top-6 w-4 h-4 bg-slate-400 dark:bg-slate-400 rounded-full -translate-x-[9px]"></div>
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="text-lg font-semibold">Web Developer</h3>
-                    <p className="text-slate-400 text-sm">Intern at Golden Dreams Software Solutions</p>
+                    <p className="text-slate-600 italic dark:text-slate-400 text-sm">Intern at Golden Dreams Software Solutions</p>
                   </div>
-                  <span className="text-slate-400 text-sm whitespace-nowrap">
+                  <span className="text-slate-600 dark:text-slate-400 text-sm whitespace-nowrap">
                     2023
                   </span>
                 </div>
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                   Successfully completed an internship at Golden Dream Software Solutions. Gained proficiency in HTML, CSS, JavaScript, and jQuery through hands-on training.
                 </p>
               </div>
