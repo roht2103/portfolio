@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandLinkedin,IconBrandTwitter, IconMail, IconMapP
 
 export default function Profile() {
   return (
-    <div className="p-8">
+    <div className="lg:p-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Profile Info */}
         <div className="flex flex-col items-center lg:items-start space-y-6">

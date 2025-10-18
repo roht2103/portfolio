@@ -27,7 +27,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 min-h-screen flex items-center">
+    <section id="about" className="py-20 lg:px-6 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
