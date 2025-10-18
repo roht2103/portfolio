@@ -15,8 +15,8 @@ export default function Projects() {
         "Enhanced user experience and communication"
       ],
       technologies: ["React.js", "JavaScript", "Sentiment Analysis", "WebSocket"],
-      sourceCode: "#",
-      liveDemo: "#",
+      sourceCode: "https://github.com/roht2103/chat-app",
+      liveDemo: "https://zennchat.vercel.app/",
       featured: true
     },
     {
@@ -29,8 +29,8 @@ export default function Projects() {
         "Video editing and comment moderation features"
       ],
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "YouTube API", "Clerk"],
-      sourceCode: "#",
-      liveDemo: "#",
+      sourceCode: "https://github.com/roht2103/YouTube-Companion-Dashboard",
+      liveDemo: "https://youtube-consol.vercel.app/",
       featured: true
     },
     {
@@ -43,8 +43,8 @@ export default function Projects() {
         "Deployed with Docker on Vercel and Render"
       ],
       technologies: ["Next.js", "Flask", "Machine Learning", "Docker", "PostgreSQL"],
-      sourceCode: "#",
-      liveDemo: "#",
+      sourceCode: "https://github.com/roht2103/carbon-footprint-estimator",
+      liveDemo: "https://carbonfootprintestimator.vercel.app/",
       featured: true
     }
   ];

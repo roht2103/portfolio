@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import ModeToggle from "@/components/ModeToggle";
-import { span } from "motion/react-m";
 
 export default function NavBar() {
   const navItems = [

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import NavBar from "@/components/Navbar";
 import { Floatingdock } from "@/components/FloatingDock";
 import Profile from "@/components/Profile";

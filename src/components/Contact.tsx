@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { IconMail, IconUser, IconMessageCircle, IconSend, IconBrandGithub, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react";
+import { IconMail, IconUser, IconSend, IconBrandGithub, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react";
 import {
   Form,
   FormControl,
@@ -127,10 +127,10 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                       animate={{ opacity: 1, y: 0 }}
                       className="p-4 rounded-lg bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 text-sm"
                     >
-                      ✓ Message sent successfully! I'll get back to you soon.
+                      ✓ Message sent successfully! I&apos;ll get back to you soon.
                     </motion.div>
                   )}
 

@@ -58,7 +58,7 @@ export default function AboutMe() {
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl"></div>
               
               <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-                👋 Hey there! I'm{" "}
+                👋 Hey there! I&apos;m{" "}
                 <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
                   Rohit Thorat
                 </span>{" "}
@@ -81,7 +81,7 @@ export default function AboutMe() {
               <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
                 I specialize in developing modern web applications using the{" "}
                 <span className="font-semibold text-blue-600 dark:text-blue-400">MERN stack</span>, 
-                and I'm also fascinated by{" "}
+                and I&apos;m also fascinated by{" "}
                 <span className="font-semibold text-green-600 dark:text-green-400">IoT</span> {" "}
                 innovations. My projects often focus on solving meaningful real-world problems.
               </p>
