@@ -36,7 +36,7 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("mx-auto flex h-16 items-center gap-2 rounded-2xl bg-gray-50 px-4 py-3 md:hidden dark:bg-neutral-900", className)}>
+    <div className={cn("mx-auto flex items-center gap-2 rounded-2xl bg-gray-50 px-4 py-3 md:hidden dark:bg-neutral-900", className)}>
       {items.map((item) => (
         <a
           href={item.href}
