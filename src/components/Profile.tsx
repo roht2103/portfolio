@@ -30,7 +30,7 @@ export default function Profile() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-3">
+          <div className="space-y-3 flex flex-col lg:items-start items-center">
             <div className="flex items-center lg:justify-start justify-center gap-3">
               <IconMail className="w-5 h-5" />
               <span>rohitthorat680@gmail.com</span>
