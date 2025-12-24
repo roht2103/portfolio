@@ -136,7 +136,7 @@ export default function Contact() {
 
             {/* Contact Details */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
                 <div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
                   <IconMail className="w-5 h-5 text-white dark:text-slate-900" />
                 </div>
@@ -151,7 +151,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
                 <div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
                   <IconUser className="w-5 h-5 text-white dark:text-slate-900" />
                 </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-colors duration-200"
+                    className="w-12 h-12 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-colors duration-200"
                   >
                     {link.icon}
                   </motion.a>
@@ -195,7 +195,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg">
+            <div className="p-8 rounded-2xl bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] shadow-lg">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
