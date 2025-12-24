@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "motion/react";
-import { IconArrowLeft, IconExternalLink, IconCalendar, IconBook } from "@tabler/icons-react";
+import { IconArrowLeft, IconBook } from "@tabler/icons-react";
 import Link from "next/link";
+import { HoverEffect } from "../../components/ui/card-hover-effect";
 
 export default function Blogs() {
   const blogs = [
@@ -16,7 +17,7 @@ export default function Blogs() {
         "Creating Your First Component"
       ],
       category: "Web Development",
-      url: "https://medium.com/@rohitthorat680/getting-started-with-react-js-a-beginners-guide-c39ac1d02fe4",
+      link: "https://medium.com/@rohitthorat680/getting-started-with-react-js-a-beginners-guide-c39ac1d02fe4",
       featured: true
     },
     {
@@ -30,7 +31,7 @@ export default function Blogs() {
         "Challenges and Considerations"
       ],
       category: "Technology",
-      url: "https://medium.com/@rohitthorat680/the-rise-of-5g-technology-transforming-connectivity-and-beyond-9ac4b5d435c7",
+      link: "https://medium.com/@rohitthorat680/the-rise-of-5g-technology-transforming-connectivity-and-beyond-9ac4b5d435c7",
       featured: true
     },
     {
@@ -44,7 +45,7 @@ export default function Blogs() {
         "Supporting non-linear development"
       ],
       category: "Development Tools",
-      url: "https://rohit-what-is-git.netlify.app",
+      link: "https://rohit-what-is-git.netlify.app",
       featured: false
     },
     {
@@ -58,7 +59,7 @@ export default function Blogs() {
         "Easy Integration"
       ],
       category: "Web Design",
-      url: "https://medium.com/@rohitthorat680/icons-with-font-awesome-31cf9782553c",
+      link: "https://medium.com/@rohitthorat680/icons-with-font-awesome-31cf9782553c",
       featured: false
     },
     {
@@ -72,7 +73,7 @@ export default function Blogs() {
         "External stylesheet storage"
       ],
       category: "Web Development",
-      url: "https://medium.com/@rohitthorat680/what-is-css-5c0ca94d3e08",
+      link: "https://medium.com/@rohitthorat680/what-is-css-5c0ca94d3e08",
       featured: false
     },
     {
@@ -86,7 +87,7 @@ export default function Blogs() {
         "HTML elements and browser display"
       ],
       category: "Web Development",
-      url: "https://medium.com/@rohitthorat680/what-actually-html-is-9f7b100cd271",
+      link: "https://medium.com/@rohitthorat680/what-actually-html-is-9f7b100cd271",
       featured: false
     }
   ];
@@ -127,64 +128,11 @@ export default function Blogs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <IconBook className="w-6 h-6" />
               Featured Posts
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredBlogs.map((blog, index) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  className="group"
-                >
-                  <div className="h-full p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
-                        {blog.category}
-                      </span>
-                      <span className="px-3 py-1 text-xs font-medium rounded-full bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300">
-                        Featured
-                      </span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {blog.title}
-                    </h3>
-
-                    <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-500 mb-4">
-                      <IconCalendar className="w-4 h-4" />
-                      <span>{blog.date}</span>
-                    </div>
-
-                    <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                      {blog.description}
-                    </p>
-
-                    <ul className="space-y-2 mb-6">
-                      {blog.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <a
-                      href={blog.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 transition-all duration-200 group"
-                    >
-                      Read Full Article
-                      <IconExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </a>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
+            <HoverEffect items={featuredBlogs} className="grid-cols-1 lg:grid-cols-2" />
           </motion.section>
         )}
 
@@ -194,60 +142,10 @@ export default function Blogs() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
             All Posts
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regularBlogs.map((blog, index) => (
-              <motion.article
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.05 }}
-                className="group"
-              >
-                <div className="h-full p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                      {blog.category}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                    {blog.title}
-                  </h3>
-
-                  <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-500 mb-3">
-                    <IconCalendar className="w-3.5 h-3.5" />
-                    <span>{blog.date}</span>
-                  </div>
-
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed line-clamp-2">
-                    {blog.description}
-                  </p>
-
-                  <ul className="space-y-1.5 mb-4">
-                    {blog.highlights.slice(0, 3).map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400">
-                        <span className="w-1 h-1 rounded-full bg-slate-400 mt-1.5 flex-shrink-0"></span>
-                        <span className="line-clamp-1">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href={blog.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
-                  >
-                    Read More
-                    <IconExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                </div>
-              </motion.article>
-            ))}
-          </div>
+          <HoverEffect items={regularBlogs} />
         </motion.section>
       </div>
     </div>
