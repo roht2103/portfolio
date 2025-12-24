@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { IconArrowLeft, IconExternalLink, IconCalendar, IconBook } from "@tabler/icons-react";
+import { IconArrowLeft, IconBook } from "@tabler/icons-react";
 import Link from "next/link";
 import { HoverEffect } from "../../components/ui/card-hover-effect";
 

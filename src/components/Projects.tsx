@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { IconBrandGithub, IconExternalLink, IconArrowRight } from "@tabler/icons-react";
+import { IconArrowRight } from "@tabler/icons-react";
 import { HoverEffect } from "./ui/card-hover-effect";
 
 export default function Projects() {
