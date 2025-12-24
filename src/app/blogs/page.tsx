@@ -16,7 +16,6 @@ export default function Blogs() {
     const response = await fetch('/api/blogs');
     const data = await response.json();
     setAllBlogs(data.blogs);
-    console.log("Fetched Blogs:", data.blogs);
     const featured = data.blogs.filter((blog: { featured: string; }) => blog.featured === 'true');
     const regular = data.blogs.filter((blog: { featured: string; }) => blog.featured !== 'true');
     setFeaturedBlogs(featured);
