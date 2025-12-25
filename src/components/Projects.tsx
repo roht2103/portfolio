@@ -21,7 +21,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-8 lg:px-6 h-screen flex items-center">
+    <section id="projects" className="py-8 lg:py-8 px-4 lg:px-6 min-h-screen flex items-center">
       <div className="max-w-7xl w-full mx-auto">
         {/* Header */}
         <motion.div
