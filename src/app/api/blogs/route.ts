@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db/client";
 import { blogs } from "@/db/schema";
+import { desc } from "drizzle-orm";
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     // Fixed: corrected the select syntax
-    const allBlogs = await db.select().from(blogs);
+    const allBlogs = await db.select().from(blogs).orderBy(desc(blogs.date));
 
     return NextResponse.json({ blogs: allBlogs });
   } catch (error) {

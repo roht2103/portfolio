@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db/client";
 import { projects } from "@/db/schema";
+import { desc } from "drizzle-orm";
 
 export async function POST(request: NextRequest) {
   try {
@@ -60,7 +61,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     // Fixed: corrected the select syntax
-    const allProjects = await db.select().from(projects);
+    const allProjects = await db.select().from(projects).orderBy(desc(projects.createdAt));
 
     return NextResponse.json({ projects: allProjects });
   } catch (error) {
