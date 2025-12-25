@@ -98,8 +98,8 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-8 lg:px-6 h-screen flex items-center justify-center">
-      <div className="max-w-7xl mx-auto w-full px-4">
+    <section id="contact" className="py-8 lg:py-8 px-4 lg:px-6 min-h-screen flex items-center justify-center">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
