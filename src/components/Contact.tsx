@@ -48,36 +48,36 @@ export default function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-  setIsSubmitting(true);
-  setSubmitStatus(null);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-  try {
-    const result = await emailjs.send(
-      "service_k9r0pfr",     // replace with EmailJS Service ID
-      "template_x75ypfb",    // replace with EmailJS Template ID
-      {
-        name: values.name,
-        email: values.email,
-        subject: values.subject,
-        message: values.message,
-      },
-      "-BtvVtbgDb2XxjItw"      // replace with EmailJS Public Key
-    );
+    try {
+      const result = await emailjs.send(
+        "service_k9r0pfr",     // replace with EmailJS Service ID
+        "template_x75ypfb",    // replace with EmailJS Template ID
+        {
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        },
+        "-BtvVtbgDb2XxjItw"      // replace with EmailJS Public Key
+      );
 
-    if (result.status === 200) {
-      setSubmitStatus("success");
-      form.reset();
-    } else {
-      throw new Error("Failed to send email");
+      if (result.status === 200) {
+        setSubmitStatus("success");
+        form.reset();
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
     }
-  } catch (error) {
-    console.error(error);
-    setSubmitStatus("error");
-  } finally {
-    setIsSubmitting(false);
-    setTimeout(() => setSubmitStatus(null), 5000);
   }
-}
 
   const socialLinks = [
     {
@@ -98,51 +98,51 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:px-6 ">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="py-8 lg:px-6 h-screen flex items-center justify-center">
+      <div className="max-w-7xl mx-auto w-full px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-slate-900 dark:text-slate-100">
             Get In Touch
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Left Column - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-8"
+            className="lg:col-span-2 space-y-4"
           >
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
                 Let&apos;s Connect
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed text-sm">
                 I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
 
             {/* Contact Details */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
-                <div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
+                <div className="w-9 h-9 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
                   <IconMail className="w-5 h-5 text-white dark:text-slate-900" />
                 </div>
                 <div>
                   <p className="text-sm text-slate-500 dark:text-slate-500">Email</p>
-                  <a 
+                  <a
                     href="mailto:rohitthorat680@gmail.com"
                     className="text-slate-900 dark:text-slate-100 font-medium hover:underline"
                   >
@@ -151,8 +151,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
-                <div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
+              <div className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2]">
+                <div className="w-9 h-9 rounded-lg bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
                   <IconUser className="w-5 h-5 text-white dark:text-slate-900" />
                 </div>
                 <div>
@@ -166,10 +166,10 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">
+              <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
                 Find me on
               </h4>
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 {socialLinks.map((link, index) => (
                   <motion.a
                     key={index}
@@ -178,7 +178,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-colors duration-200"
+                    className="w-10 h-10 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-colors duration-200"
                   >
                     {link.icon}
                   </motion.a>
@@ -195,9 +195,9 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <div className="p-8 rounded-2xl bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] shadow-lg">
+            <div className="max-w-xl mx-auto p-5 rounded-2xl bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] shadow-lg">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                   <FormField
                     control={form.control}
                     name="name"
@@ -205,7 +205,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input className="dark:bg-stone-950" placeholder="Your name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -219,7 +219,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="your.email@example.com" type="email" {...field} />
+                          <Input className="dark:bg-stone-950" placeholder="your.email@example.com" type="email" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -233,7 +233,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="What is this about?" {...field} />
+                          <Input className="dark:bg-stone-950" placeholder="What is this about?" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -249,7 +249,7 @@ export default function Contact() {
                         <FormControl>
                           <Textarea
                             placeholder="Tell me more about your project or inquiry..."
-                            className="min-h-[150px]"
+                            className="min-h-[100px] dark:bg-stone-950"
                             {...field}
                           />
                         </FormControl>
@@ -282,7 +282,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-12 text-base font-semibold"
+                    className="w-full h-10 text-sm font-semibold"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">

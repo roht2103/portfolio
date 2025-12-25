@@ -24,7 +24,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-4 gap-3",
         className
       )}
     >
@@ -67,7 +67,7 @@ export const HoverEffect = ({
             <CardDescription>{item.description}</CardDescription>
 
             {item.highlights && item.highlights.length > 0 && (
-              <ul className="space-y-2 mt-4 mb-4">
+              <ul className="space-y-1 mt-2 mb-2">
                 {item.highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-600 mt-1.5 flex-shrink-0"></span>
@@ -78,7 +78,7 @@ export const HoverEffect = ({
             )}
 
             {item.technologies && item.technologies.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4 mb-4">
+              <div className="flex flex-wrap gap-2 mt-2 mb-2">
                 {item.technologies.map((tech, idx) => (
                   <span
                     key={idx}
@@ -90,7 +90,7 @@ export const HoverEffect = ({
               </div>
             )}
 
-            <div className="flex gap-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+            <div className="flex gap-2 mt-2 pt-2 border-t border-slate-200 dark:border-slate-700">
               {item.sourceCode && (
                 <a
                   href={item.sourceCode}
@@ -131,12 +131,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] group-hover:border-slate-400 dark:group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-3 overflow-hidden bg-white dark:bg-black border border-slate-200 dark:border-white/[0.2] group-hover:border-slate-400 dark:group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-2">{children}</div>
       </div>
     </div>
   );
@@ -149,7 +149,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-slate-900 dark:text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-slate-900 dark:text-zinc-100 font-bold tracking-wide mt-1", className)}>
       {children}
     </h4>
   );
@@ -164,7 +164,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-slate-600 dark:text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-2 text-slate-600 dark:text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
