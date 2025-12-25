@@ -6,7 +6,12 @@ import { eq, desc } from "drizzle-orm";
 export async function GET(request: NextRequest) {
   try {
     // Fixed: corrected the select syntax
-    const featuredProts = await db.select().from(projects).where(eq(projects.featured, "true")).orderBy(desc(projects.createdAt)).limit(3);
+    const featuredProts = await db
+      .select()
+      .from(projects)
+      .where(eq(projects.featured, "true"))
+      .orderBy(desc(projects.createdAt))
+      .limit(3);
 
     return NextResponse.json({ projects: featuredProts });
   } catch (error) {

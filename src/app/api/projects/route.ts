@@ -61,7 +61,10 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     // Fixed: corrected the select syntax
-    const allProjects = await db.select().from(projects).orderBy(desc(projects.createdAt));
+    const allProjects = await db
+      .select()
+      .from(projects)
+      .orderBy(desc(projects.createdAt));
 
     return NextResponse.json({ projects: allProjects });
   } catch (error) {
