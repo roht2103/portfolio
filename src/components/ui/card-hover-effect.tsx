@@ -15,7 +15,7 @@ export const HoverEffect = ({
     technologies?: string[];
     sourceCode?: string;
     link: string;
-    featured?: boolean;
+    featured?: string;
   }[];
   className?: string;
 }) => {
@@ -55,7 +55,7 @@ export const HoverEffect = ({
           <Card>
             <div className="flex items-start justify-between mb-2">
               <CardTitle>{item.title}</CardTitle>
-              {item.featured && (
+              {item.featured === "true" && (
                 <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 flex-shrink-0">
                   Featured
                 </span>

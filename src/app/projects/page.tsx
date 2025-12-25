@@ -36,7 +36,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-12"
+        className="mb-8"
       >
         <Link
           href="/"
@@ -45,7 +45,7 @@ export default function Projects() {
           <IconArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-1">
           All Projects
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -56,7 +56,7 @@ export default function Projects() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+          <h2 className="mt-8 text-2xl font-bold text-slate-900 dark:text-slate-100">
             Featured Projects
           </h2>
           <HoverEffect items={featuredProjects} />
